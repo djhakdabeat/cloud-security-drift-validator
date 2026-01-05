@@ -3,5 +3,8 @@ cloud-security-drift-validator/
 ├── requirements.txt
 ├── config.py
 ├── drift_validator.py
-├── dns_tunneling.py  
+├── dns_tunneling.py  - This adds lightweight DNS tunneling detection using entropy and label analysis. It’s not signature-based, so it catches novel exfiltration attempts without deep packet inspection.
+                        1. High-entropy subdomains
+                        2. Excessive label length
+                        3. Suspicious query patterns
 └── .gitignore
